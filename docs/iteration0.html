@@ -4,12 +4,21 @@
 function fibonacci (number) {
      //if number is 1 or 2  just return 1
      //otherwise return sum of fibonacci of previous two numbers
+     if (number === 1) {
+        return 1;
+     }
+     if (number === 2) {
+        return 1;
+     }
+     return fibonacci(number - 1) + fibonacci(number - 2);
      }
 
 function compute_and_display () {
      // get the value from the input
      //result = fibonacci(input)
      //display result on the webpage
+     result = fibonacci(input);
+     document.getElementById("output_goes_here").innerHTML = result.toString();
      }
 
 </script>
@@ -19,6 +28,6 @@ function compute_and_display () {
 
 <!--BUTTON THAT RUNS "compute_and_display()" -->
 
-<p id="output_goes_here"></p>
+<p id="output_goes_here"></p >
 </body>
 </html>
